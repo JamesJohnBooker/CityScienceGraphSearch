@@ -71,9 +71,9 @@ else: #If the start and end nodes are different, then the distance between them 
             if pathExists == False: #If pathExists is set to false then the while loop ends.
                 break
             currentNodeIndex = nextNodeIndex #The index for the node to be explored during the next iteration of the while loop is set to nextNodeIndex.
-    if pathExists == False: #If we have confirmed that there is no path from startNode to endNode, then a message confirming this is printed in the command line.
+    if pathExists == False: #If we have confirmed that there is no path from startNode to endNode, then a message confirming this is printed in the command prompt.
         print("There is no path from " + startNode + " to " + endNode + ".")
-    else: #If, on the other hand, we have found a path from startNode to endNode (which will be the shortest such path thanks to Dijkstra's algorithm), we will print the nodes in this path in the command line.
+    else: #If, on the other hand, we have found a path from startNode to endNode (which will be the shortest such path thanks to Dijkstra's algorithm), we will print the nodes in this path in the command prompt.
         shortestPathListed = False #shortestPathListed is initialised to be false and remains so until every node in our shortest path has been added to the list shortestPath.
         shortestPath = [endNode] #shortestPath is initialised to contain endNode.
         currentNodeIndex = len(checkedDistances) - 1 #currentNodeIndex is given the value of the index of endNode in checkedDistances (since this will always be the last node visited before the shortest path from startNode to endNode is found).
@@ -86,5 +86,5 @@ else: #If the start and end nodes are different, then the distance between them 
                 for nodeIndex in range(0, len(checkedDistances)): #This for loop iterates through the indexes of the elements of checkedDistances.
                     if checkedDistances[nodeIndex][0] == checkedDistances[currentNodeIndex][2]: #When the element in checkedDistances corresponding to the node preceeding the newly added node has been found, currentNodeIndex is given the value of that element's index position.
                         currentNodeIndex = nodeIndex
-        for nodeIndex in range(0, len(shortestPath)): #The elements of shortestPath are printed to the command line in reverse order (that is, from startNode to endNode).
+        for nodeIndex in range(0, len(shortestPath)): #The elements of shortestPath are printed to the command prompt in reverse order (that is, from startNode to endNode).
             print(shortestPath[len(shortestPath) - 1 - nodeIndex])
