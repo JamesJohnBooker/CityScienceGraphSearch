@@ -1,2 +1,2 @@
 # CityScienceGraphSearch
-This script peform's Dijkstra's algorithm to find the shortest path between two nodes in a graph.
+This script performs Dijkstra's algorithm to find the shortest path from one node to another node in a graph.
